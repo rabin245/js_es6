@@ -8,5 +8,5 @@ const person = {
 person.walk();
 
 const walk = person.walk;
-// console.log(walk);
+// console.log(walk);   // displays the function
 walk(); // returns reference to global object (window object)
