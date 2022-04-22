@@ -7,6 +7,9 @@ const person = {
 
 person.walk();
 
-const walk = person.walk;
-// console.log(walk);   // displays the function
-walk(); // returns reference to global object (window object)
+// in js, functions are objects
+// person.walk is an object
+const walk = person.walk.bind(person);
+// bind method sets the value of 'this' as the argument 
+
+walk(); // now will return person object instead of the global object
